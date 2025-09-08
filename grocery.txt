@@ -1,5 +1,15 @@
-groceries list
-
-1. apple
-2. oranges
-3. watermelon
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Groceries List</title>
+</head>
+<body>
+  <h1>Groceries List</h1>
+  <ol>
+    <li>Apple</li>
+    <li>Oranges</li>
+    <li>Watermelon</li>
+  </ol>
+</body>
+</html>
