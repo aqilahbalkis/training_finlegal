@@ -3,12 +3,12 @@
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta charset="UTF-8">
-  <title>Slater&Gordon - Strip Searches</title>
+  <title>Slater & Gordon - Strip Searches</title>
   <style>
     /* page */
     html,body { height: 100%; }
     body {
-      font-family: Arial, sans-serif;
+      font-family: Poppins, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #e6f7fb; /* blue outside sections */
@@ -17,17 +17,26 @@
     }
 
     /* header/footer: full width white bars */
-    header, footer {
+    header {
       width: 100%;
+      height:20%;
       background: #fff;
       box-sizing: border-box;
     }
+
+    footer {
+      width: 100%;
+      height:30%;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
 
     /* inner container keeps the 150px side spacing */
     .inner {
       max-width: 1400px;          /* optional */
       margin: 0 auto;
-      padding: 36px 150px;        /* keeps your left/right spacing */
+      padding: 60px 150px;        /* keeps your left/right spacing */
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -40,9 +49,9 @@
 
     .nav-links a {
       text-decoration: none;
-      margin-left: 50px;
+      margin-left: 30px;
       color: #000;
-      font-size: 16px;
+      font-size: 17px;
       transition: color .2s ease;
     }
     .nav-links a:first-child { margin-left: 0; }
@@ -52,53 +61,94 @@
     .card {
       background: #fff;
       border: 1px solid #ccc;
-      margin: 50px 150px;   /* same 150px left/right spacing */
-      padding: 30px;
+      margin: 20px auto;    /* centers horizontally */
+      padding-right:20px;
+      padding-left:20px;
       box-sizing: border-box;
+      max-width: 1100px;     /* make it slimmer */
+      width: 100%;          /* let it shrink on smaller screens */
     }
+
 
     /* footer layout */
     footer .inner {
-  display: block;       /* stack everything */
-  padding: 36px 150px;
-  box-sizing: border-box;
-}
+      display: block;       /* stack everything */
+      padding: 36px 150px;
+      box-sizing: border-box;
+    }
 
-.footer-left {
-  max-width: 800px;
-}
+    .footer-left {
+      max-width: 800px;
+    }
 
-.footer-left h1 {
-  margin: 0;
-  font-size: 20px;
-}
+    .footer-left h1 {
+      margin: 0;
+      font-size: 20px;
+    }
 
-.footer-left span {
-  color: #0099cc;
-  font-weight: 400;
-}
+    .footer-left span {
+      color: #0099cc;
+      font-weight: 400;
 
-footer p {
-  margin: 6px 0;
-  color: #333;
-}
+    }
 
-.social {
-  margin-top: 20px;   /* spacing from text above */
-}
+    footer p {
+      margin: 6px 0;
+      color: #333;
+    font-size: 12px;
 
-.social a {
-  margin-right: 12px;
-  color: #000;
-  text-decoration: none;
-  font-size: 20px;
-}
+    }
+
+    .social {
+      margin-top: 20px;   /* spacing from text above */
+    }
+
+    .social a {
+      margin-right: 12px;
+      color: #000;
+      text-decoration: none;
+      font-size: 20px;
+    }
 
 
     /* reduce spacing on small screens */
     @media (max-width: 1000px) {
       .inner { padding: 20px; }
       .card { margin: 30px 20px; }
+    }
+
+    /* make Initial Qualification larger but not bold */
+    .card h3:first-of-type {
+      font-size: 20px;     /* bigger than normal text */
+      font-weight: normal; /* remove bold */
+    }
+
+    .card section p {
+      font-size: 16px;     /* bigger than normal text */
+    }
+
+    .card a {
+      color: #000;              /* black text */
+      text-decoration: underline; /* always underline */
+    }
+
+    button {
+      background-color: #00b7e0;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    .card label {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-right: 10px;
+      color: #b4b4b4;   /* light gray text */
     }
   </style>
 </head>
@@ -125,9 +175,9 @@ footer p {
     <div class="card">
 
     <h3>Initial Qualification</h3>
-<hr>
+    <hr>
     <section>
-      <h3>Registration Form</h3>
+      <h4>Registration Form</h4>
       <p style="font-style:italic;">
         By completing this form, you are expressing your interest in registering to receive updates in the class action.
       </p>
@@ -144,26 +194,24 @@ footer p {
         <a href="mailto:stripsearch@slatergordon.com.au">stripsearch@slatergordon.com.au</a>.
       </p>
     </section>
-
+    <br>
+    <br>
     <section>
       <p>Were you, or the person you are registering on behalf of, searched by NSW Police?</p>
       <p style="font-style:italic;">NOTE: This class action only covers searches by NSW police and not by festival security. A search includes a visual or physical search of your clothing and/or body (and not a bag search only).</p>
-      <form>
-        <label><input type="radio" name="searched" value="yes"> Yes</label>
-        <label><input type="radio" name="searched" value="no"> No</label>
-        <label><input type="radio" name="searched" value="unsure"> I'm not sure</label>
-      </form>
+           <label style="display: inline-block; border: 1px solid #ccc; padding: 10px; margin-right: 10px;">
+          <input type="radio" name="media" value="yes"> Yes
+          </label>
+          <label style="display: inline-block; border: 1px solid #ccc; padding: 10px;">
+            <input type="radio" name="media" value="no"> No
+          </label>
+          <label style="display: inline-block; border: 1px solid #ccc; padding: 10px;">
+            <input type="radio" name="media" value="unsure"> I'm not sure
+          </label>
       <p>Who would you like to talk to?</p>
     </section>
 
-    <section>
-      <p>Were you, or the person you are registering on behalf of, searched by NSW Police?</p>
-      <form>
-        <label><input type="radio" name="searched" value="yes"> Yes</label>
-        <label><input type="radio" name="searched" value="no"> No</label>
-        <label><input type="radio" name="searched" value="unsure"> I'm not sure</label>
-      </form>
-    </section>
+    
 
     <section style="margin-top: 20px;">
 
@@ -189,26 +237,17 @@ footer p {
         </label>
       </div>
 
-      <label for="email">Email</label><br>
-      <input type="email" id="email" name="email" style="width: 100%; padding: 8px; margin: 10px 0 20px 0; border: 1px solid #ccc;">
+      <p>Email</p>
+      <input type="email" id="email" name="email" style="width: 95%; padding: 8px; margin: 10px 0 20px 0; border: 1px solid #ccc;">
 
       <div style="border: 1px solid #ccc; width: 300px; padding: 10px; display: flex; align-items: center; gap: 10px;">
         <input type="checkbox" id="notRobot">
-        <label for="notRobot">I'm not a robot</label>
+        <p>I'm not a robot</p>
         <span style="margin-left: auto; font-size: 12px; color: gray;">reCAPTCHA<br>Privacy - Terms</span>
       </div>
 
       <div style="text-align: right; margin-bottom: 40px;">
-        <button type="submit" style="
-          background-color: #00b7e0;
-          color: white;
-          border: none;
-          padding: 10px 30px;
-          font-size: 14px;
-          font-weight: bold;
-          letter-spacing: 2px;
-          cursor: pointer;
-        ">
+        <button type="submit">
           NEXT
         </button>
       </div>
@@ -226,7 +265,8 @@ footer p {
       <div class="footer-left">
         <h1>Slater Gordon <span>Lawyers</span></h1>
         <p>© Slater and Gordon Ltd, 2025. All rights reserved*.</p>
-        <p style="font-size:13px; max-width:700px;">*Except as permitted by the copyright law applicable to you, you may not copy, adapt, use, reproduce, communicate or commercialise any of the content on this website without the prior written permission of the copyright owner.</p>
+        <br>
+        <p style="font-size:12px; max-width:800px;">*Except as permitted by the copyright law applicable to you, you may not copy, adapt, use, reproduce, communicate or commercialise any of the content on this website without the prior written permission of the copyright owner.</p>
       </div>
 
       <div>
