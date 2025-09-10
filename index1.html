@@ -9,202 +9,200 @@
 
   <title>Slater & Gordon - Strip Searches</title>
  <style>
-  /* ✅ Added: make sizing predictable everywhere */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-
-  html, body { 
-    height: 100%; 
-    max-width: 100%;     /* ✅ prevent overflow */
-    overflow-x: hidden;  /* ✅ stop sideways scroll */
-  }
-
-  body {
-  margin: 0;
-  padding: 0;
-  background-color: #e6f7fb; /* ✅ blue background shows everywhere */
-  color: #222;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-font-family: Poppins;
-    font-size: 15px;
-    font-weight: 400;
-  
-}
-
-  header {
-    width: 100%;
-    background: #fff;
-  }
-
-  footer {
-    width: 100%;
-    background: #fff;
-  }
-
-  .inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 150px;     
-    display: flex;
-    align-items: center;      
-    justify-content: space-between;
-  }
-
-  .site-logo h1 { font-size: 28px; margin: 0; font-weight: 700; }
-  .site-logo span { color: #0099cc; font-weight: 400; }
-
-  .nav-links a {
-    text-decoration: none;
-    margin-left: 30px;
-    color: #000;
-    font-size: 17px;
-    transition: color .2s ease;
-  }
-  .nav-links a:first-child { margin-left: 0; }
-  .nav-links a:hover { color: #0099cc; }
-
-  .card {
-  background: #fff;
-  border: 1px solid #ccc;
-  margin: 20px auto;     /* ✅ keeps it centered */
-  padding: 20px;
-  max-width: 1100px;
-  width: calc(100% - 30px); /* ✅ ensures space left & right */
-  box-sizing: border-box;
-  
-}
-
-  footer .inner {
-    display: block;      
-    padding: 36px 150px;
-  }
-
-  .footer-left {
-    max-width: 800px;
-  }
-
-  .footer-left h1 {
-    margin: 0;
-    font-size: 20px;
-  }
-
-  .footer-left span {
-    color: #0099cc;
-    font-weight: 400;
-  }
-
-  footer p {
-    margin: 6px 0;
-    color: #333;
-    font-size: 12px;
-  }
-
-  .social {
-    margin-top: 20px;   
-  }
-
-  .social a {
-    margin-right: 12px;
-    color: #000;
-    text-decoration: none;
-    font-size: 20px;
-  }
-
-  /* ✅ Adjust padding on tablets */
-  @media (max-width: 1000px) {
-    .inner { padding: 20px 40px; }  /* reduced from 150px */
-    .card { margin: 20px; }
-    footer .inner { padding: 20px; }
-  }
-
-  /* ✅ Fix on smaller mobile */
-  @media (max-width: 600px) {
-    .inner { padding: 12px 16px; }
-    .card { margin: 15px; }
-  }
-
-  .card h3:first-of-type {
-    font-size: 20px;    
-    font-weight: normal;
-  }
-
-  .card section p {
-    font-size: 16px;     
-  }
-
-  .card a {
-    color: #000;             
-    text-decoration: underline;
-  }
-
-  button {
-    border: none;
-     padding: 15px 45px;     
-    font-size: 15px;        
-    font-weight: normal;      
-    text-transform: uppercase;
-    color: #FFFFFF;
-    background-color: #00b5e5;
-    border-radius: 5px;     
-    font-family: Poppins; 
-    cursor: pointer;    
-    letter-spacing: 4px;    
-
-  }
-
-  .card label {
-    display: inline-block;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-right: 10px;
-    color: #b4b4b4;   
-  }
-
-  .menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-  }
-
-  @media (max-width: 800px) {
-    .nav-links {
-      display: none;              
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 100px;                 
-      right: 20px;
-      width: 200px;
-      border: 1px solid #ccc;
-      padding: 15px;
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
 
+    html, body { 
+      height: 100%; 
+      max-width: 100%;    
+      overflow-x: hidden; 
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #e6f7fb; 
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: Poppins;
+      font-size: 15px;
+      font-weight: 400;
+      
+    }
+
+    header {
+      width: 100%;
+      background: #fff;
+    }
+
+    footer {
+      width: 100%;
+      background: #fff;
+    }
+
+    .inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 150px;     
+      display: flex;
+      align-items: center;      
+      justify-content: space-between;
+    }
+
+    .site-logo h1 { font-size: 28px; margin: 0; font-weight: 700; }
+    .site-logo span { color: #0099cc; font-weight: 400; }
+
     .nav-links a {
-      margin: 10px 0;
+      text-decoration: none;
+      margin-left: 30px;
+      color: #000;
+      font-size: 17px;
+      transition: color .2s ease;
+    }
+    .nav-links a:first-child { margin-left: 0; }
+    .nav-links a:hover { color: #0099cc; }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ccc;
+      margin: 20px auto;     
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top:0px;
+      padding-bottom:0px;
+      max-width: 1100px;
+      width: calc(100% - 30px); 
+      box-sizing: border-box;
+    }
+
+    footer .inner {
+      display: block;      
+      padding: 36px 150px;
+    }
+
+    .footer-left {
+      max-width: 800px;
+    }
+
+    .footer-left h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .footer-left span {
+      color: #0099cc;
+      font-weight: 400;
+    }
+
+    footer p {
+      margin: 6px 0;
+      color: #333;
+      font-size: 12px;
+    }
+
+    .social {
+      margin-top: 20px;   
+    }
+
+    .social a {
+      margin-right: 12px;
+      color: #000;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    @media (max-width: 1000px) {
+      .inner { padding: 20px 40px; }  
+      .card { margin: 20px; }
+      footer .inner { padding: 20px; }
+    }
+
+    @media (max-width: 600px) {
+      .inner { padding: 12px 16px; }
+      .card { margin: 15px; }
+    }
+
+    .card h3:first-of-type {
+      font-size: 20px;    
+      font-weight: normal;
+    }
+
+    .card section p {
+      font-size: 16px;     
+    }
+
+    .card a {
+      color: #000;             
+      text-decoration: underline;
+    }
+
+    button {
+      border: none;
+      padding: 15px 45px;     
+      font-size: 15px;        
+      font-weight: normal;      
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background-color: #00b5e5;
+      border-radius: 5px;     
+      font-family: Poppins; 
+      cursor: pointer;    
+      letter-spacing: 4px;    
+
+    }
+
+    .card label {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-right: 10px;
+      color: #b4b4b4;   
     }
 
     .menu-toggle {
-      display: block;           
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
     }
 
-    .nav-links.active {
-      display: flex;              
-    }
-  }
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;              
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 100px;                 
+        right: 20px;
+        width: 200px;
+        border: 1px solid #ccc;
+        padding: 15px;
+      }
 
-  /* ✅ Make fake recaptcha responsive */
-  .recaptcha {
-    border: 1px solid #ccc;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    max-width: 300px;  /* stays neat on big screens */
-  }
+      .nav-links a {
+        margin: 10px 0;
+      }
+
+      .menu-toggle {
+        display: block;           
+      }
+
+      .nav-links.active {
+        display: flex;              
+      }
+    }
+
+    .recaptcha {
+      border: 1px solid #ccc;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 300px; 
+    }
 </style>
 
 </head>
