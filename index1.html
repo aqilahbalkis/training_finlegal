@@ -212,6 +212,11 @@
       width: 100%;
       max-width: 300px; 
     }
+
+.search {
+  display: none; /* hidden initially */
+}
+
 </style>
 
 </head>
@@ -264,7 +269,7 @@
     </section>
     <br>
     <br>
-    <section>
+    <section class="register">
       <p>Were you, or the person you are registering on behalf of, searched by NSW Police?</p>
       <p style="font-style:italic;">NOTE: This class action only covers searches by NSW police and not by festival security. A search includes a visual or physical search of your clothing and/or body (and not a bag search only).</p>
            <label style="display: inline-block; border: 1px solid #ccc; padding: 10px; margin-right: 10px;">
@@ -278,6 +283,22 @@
           </label>
       <p>Who would you like to talk to?</p>
     </section>
+
+ <section class="search">
+      <p>Did the search include a strip search?</p>
+      <p style="font-style:italic;"NOTE: A strip search may include any kind of search that is more invasive than a general, pat down search over the outside of your clothes. For example, it may include if: You were asked to remove some or all of your clothing, other than a coat or jacket or similar outer clothing, or gloves, shoes, socks or hat; Police officers looked under your clothing at your body; or Police placed their hands or fingers under your clothing.</p>
+         <label>
+    <input type="radio" name="strip-search" value="yes"> Yes
+  </label>
+  <label>
+    <input type="radio" name="strip-search" value="no"> No
+  </label>
+  <label>
+    <input type="radio" name="strip-search" value="unsure"> I'm not sure
+  </label>
+      <p>Who would you like to talk to?</p>
+    </section>
+
 
     
 
@@ -351,6 +372,19 @@
 <script>
   document.getElementById("menu-toggle").addEventListener("click", function () {
     document.getElementById("nav-links").classList.toggle("active");
+  });
+
+  const registerRadios = document.querySelectorAll('input[name="register-search"]');
+  const searchSection = document.querySelector('.search');
+
+  registerRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.value === "yes") {
+        searchSection.style.display = "block"; // show
+      } else {
+        searchSection.style.display = "none";  // hide
+      }
+    });
   });
 </script>
 
