@@ -1,18 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Notice of Dispute and Claimant Statement</title>
+  <style>
+  
+    body {
+      font-family: Times New Romans;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center; 
+      text-align: justify;
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    }
 
-  <title>Slater & Gordon - Strip Searches</title>
+    .container {
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto; 
+      text-align: center;
+    }
 
+    .heading {
+      font-size: 16px;
+      font-weight: 700;           
+      text-decoration: underline;  
+      margin: 0 0 20px 0;
+      line-height: 1.3;
+      font-family: Times New Romans;
+    }
+
+    .body-text {
+      white-space: pre-wrap; 
+      font-size: 16px;
+      line-height: 1.5;
+      font-family: Times New Romans;
+      text-align: justify;
+    }
+
+    .small-text {
+      font-size: 16px;      
+      line-height: 1.4;
+      margin: 0 auto 20px auto;
+      max-width: 80%;          
+      padding: 10px 15px;
+      font-family: Times New Romans;
+      text-align: justify;
+    }
+    
+    a {
+      word-break: break-all;
+    }
+
+    footer {
+      font-family: Times New Romans;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center; 
+      color: #6d6c6c;
+      text-align: justify;
+    }
+
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1 class="heading">NOTICE OF DISPUTE AND CLAIMANT STATEMENT</h1>
 
-    
+    <p class="body-text">
+    I, [Claimant Name], affirm that, on or about {{ "now" | date: "%d-%m-%Y" }}, I purchased a product directly from the Breville USA, Inc. (“Breville”) website (<a href="https://www.breville.com/" target="_blank" rel="noopener noreferrer">https://www.breville.com/</a>). My purchase was for personal, family, or household (and not business) use, and made with no intention of resale. As a part of the purchase process, I was required to agree to the Breville Terms of Use and Sale. At the time I made my purchase, the Breville Terms of Use and Sale contained a provision that read as follows:
+    </p>
 
-</body>
+    <p class="small-text">
+	  By using the interactive features and areas of the Services, you further agree not to create, post, share or store . . . User Content that, in our sole judgment, is objectionable or that restricts or inhibits any other person from using or enjoying the Products or Services, or that may expose Breville or others to any harm or liability of any type.
+    </p>
+
+    <p class="body-text">
+    By including this provision in a contract for the sale of consumer goods or services, Breville violated Cal. Civ. Code § 1670.8 (California’s Yelp Law). As such, I am seeking all appropriate remedies, including, but not limited to, recovery of statutory damages from Breville and injunctive relief.
+    </p>
+
+    <p class="body-text">
+    My telephone number is {{ Contact.PhoneNumber }}, my email address is {% if Contact.Email != “” %}{{ Contact.Email }}{% else %}{% endif %}, and my physical address is {{Contact.FullAddress }}. 
+    My Breville account username is {% if Claim.username != “” %}{{ Claim.username }}{% else %}{% endif %}
+    </p>
+
+    <p class="body-text">
+    I would like to pursue my legal claims against Breville through an arbitration administered by JAMS under the Breville Terms of Use and Sale, or in any other forum that the below-referenced attorneys believe my claim should be filed or administered. In order to make a purchase on the Breville website, I was required to agree to the Breville Terms of Use and Sale, including the requirement that any disputes, claims, suits, actions, causes of action, demands or proceedings between myself and Breville—including the claims I seek to pursue herein—are subject to binding arbitration on an individual basis.
+    </p>
+
+    <p class="body-text">
+    I authorize my attorneys, Don Bivens PLLC and The Law Offices of Jibrael S. Hindi, PLLC, to act as my legal counsel in connection with claims that I have against Breville and/or related entities for including a non-disparagement provision in a contract for the sale or lease of consumer goods or services. I also authorize Don Bivens PLLC and The Law Offices of Jibrael S. Hindi, PLLC to obtain any and all information or documents that may be contained in public or private files relating to my dispute with Breville and/or related entities, including information or documents held by Breville or third parties. This authorization is valid during the time period that Don Bivens PLLC and The Law Offices of Jibrael S. Hindi, PLLC act as my counsel in connection with such claims.
+    </p>
+
+    <p class="body-text">
+    I further authorize Don Bivens PLLC and The Law Offices of Jibrael S. Hindi, PLLC to provide Breville with: (a) my name, address, and phone number; (b) a description of the nature and basis of the claim or dispute; and (c) an explanation of the relief sought from Breville.
+    </p>
+
+    <p class="body-text">
+    I also hereby elect to waive my participation in a class action settlement that would otherwise include my claim(s). I consent to my attorneys executing an opt-out form on my behalf in any class action settlement, or, if there is no class action settlement for which preliminary approval or final approval has been granted, to give notice to the court that I have elected to opt-out of the class action. I acknowledge that I retain the right to revoke this waiver at any time after providing written notice to the aforementioned attorneys.
+    </p>
+
+    <p class="body-text" ><strong>
+    BY SIGNING BELOW, I DECLARE UNDER PENALTY OF PERJURY UNDER THE LAW OF THE UNITED STATES OF AMERICA THAT THIS INFORMATION IS TRUE AND CORRECT. 
+    </strong></p>
+
+    <p class="body-text">
+    [CLAIMANT E-SIGNATURE] {% if Attributes.signature != “” %}{{ Attributes.signature }}{% else %}{% endif %}
+    [Claimant Name] {{ Contact.FullName }}
+    [Date of Signature] {{ "now" | date: "%d-%m-%Y" }}
+    </p>
+
+
+    <footer>
+        <p>
+        Don Bivens PLLC is headquartered at 15169 N. Scottsdale Road, Suite 205, Scottsdale, Arizona 85254. The Law Offices of Jibrael S. Hindi, PLLC is headquartered at 1515 NE 26th Street, Wilton manors, Florida 33305.      
+        </p>
+    </footer>
+
+  </div>
+
+  </body>
 </html>
